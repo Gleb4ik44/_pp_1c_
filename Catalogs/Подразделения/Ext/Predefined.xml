@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.20">
+	<Item id="72126aaf-93e4-4784-8192-1ec6927563b4">
+		<Name>Бухгалтерия</Name>
+		<Code>000000006</Code>
+		<Description>Бухгалтерия</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2c63b09b-a257-449b-88d6-6a7788ee684d">
+		<Name>Директор</Name>
+		<Code>000000004</Code>
+		<Description>Директор</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b4ead4ab-6c1b-41fd-b3cb-dcb80d1b4bf3">
+		<Name>МенеджерПоПерсоналу</Name>
+		<Code>000000003</Code>
+		<Description>Менеджер по персоналу</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4e779126-2028-4df6-9a0c-165fdc61316f">
+		<Name>НачальникиОтделов</Name>
+		<Code>000000002</Code>
+		<Description>Начальники отделов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c254f20b-ebd7-4664-a6f1-c17142d74351">
+		<Name>ОтделЗакупки</Name>
+		<Code>000000007</Code>
+		<Description>Отдел закупки</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="be65e3f8-8efb-4127-a0e0-f5d6b91a6bb5">
+		<Name>СекретарьДиректора</Name>
+		<Code>000000001</Code>
+		<Description>Секретарь директора</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a5cb9f62-14ad-405b-8924-d417d5850272">
+		<Name>Сотрудники</Name>
+		<Code>000000005</Code>
+		<Description>Сотрудники</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4a668429-c7b3-4079-86e5-6d284772d215">
+		<Name>ОтделПродаж</Name>
+		<Code>000000008</Code>
+		<Description>Отдел продаж</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

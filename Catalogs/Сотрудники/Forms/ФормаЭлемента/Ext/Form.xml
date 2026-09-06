@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<LabelField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<InputField name="Фамилия" id="10">
+			<DataPath>Объект.Фамилия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ФамилияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ФамилияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Имя" id="13">
+			<DataPath>Объект.Имя</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИмяКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ИмяПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Отчество" id="16">
+			<DataPath>Объект.Отчество</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОтчествоКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ОтчествоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ФизическоеЛицо" id="53">
+			<DataPath>Объект.ФизическоеЛицо</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<InputField name="ДатаРождения" id="19">
+			<DataPath>Объект.ДатаРождения</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="НомерТелефона" id="22">
+			<DataPath>Объект.НомерТелефона</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерТелефонаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="НомерТелефонаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Должность" id="7">
+			<DataPath>Объект.Должность</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДолжностьКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="ОпытРаботы" id="25">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ОпытРаботы</DataPath>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="13" kind="StyleItem" scale="100"/>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОпытРаботыКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="ОпытРаботыКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="ОпытРаботыРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="ОпытРаботыСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>ОпытРаботы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОпытРаботыСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ОпытРаботыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОпытРаботыСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>ОпытРаботы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОпытРаботыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ОпытРаботыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОпытРаботыУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>ОпытРаботы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОпытРаботыУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ОпытРаботыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОпытРаботыНомерСтроки" id="38">
+					<DataPath>Объект.ОпытРаботы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОпытРаботыНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ОпытРаботыНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="ОпытРаботыОрганизация" id="41">
+					<DataPath>Объект.ОпытРаботы.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОпытРаботыОрганизацияКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ОпытРаботыОрганизацияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ОпытРаботыДолжность" id="44">
+					<DataPath>Объект.ОпытРаботы.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОпытРаботыДолжностьКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ОпытРаботыДолжностьРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ОпытРаботыДатаНачала" id="47">
+					<DataPath>Объект.ОпытРаботы.ДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОпытРаботыДатаНачалаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ОпытРаботыДатаНачалаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ОпытРаботыДатаОкончания" id="50">
+					<DataPath>Объект.ОпытРаботы.ДатаОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОпытРаботыДатаОкончанияКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОпытРаботыДатаОкончанияРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сотрудники</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
