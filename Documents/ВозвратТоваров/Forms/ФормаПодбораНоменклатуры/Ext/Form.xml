@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ПеренестиВЗаявкуНаСнабжение" id="49">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПеренестиВЗаявкуНаСнабжениеРасширеннаяПодсказка" id="50"/>
+			</Button>
+			<Button name="Отменить" id="47">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<Width>11</Width>
+				<CommandName>Form.Command.Отменить</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.AppearanceCross</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<PictureLocation>Left</PictureLocation>
+				<ExtendedTooltip name="ОтменитьРасширеннаяПодсказка" id="48"/>
+			</Button>
+			<Button name="Очистить" id="73">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОчиститьВсе</CommandName>
+				<ExtendedTooltip name="ОчиститьРасширеннаяПодсказка" id="74"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="25">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСписокИнструментовНаСкладе" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список инструментов на складе</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список инструментов на складе</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСписокИнструментовНаСкладеРасширеннаяПодсказка" id="28"/>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПеремещаемыеИнструменты" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перемещаемые инструменты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа перемещаемые инструменты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПеремещаемыеИнструментыРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<Table name="ПеремещаемыеИнструменты" id="31">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ПеремещаемаяНоменклатура</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПеремещаемыеИнструментыКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="ПеремещаемыеИнструментыКоманднаяПанель" id="33">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПеремещаемыеИнструментыРасширеннаяПодсказка" id="34"/>
+							<SearchStringAddition name="ПеремещаемыеИнструментыСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>ПеремещаемыеИнструменты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПеремещаемыеИнструментыСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="ПеремещаемыеИнструментыСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПеремещаемыеИнструментыСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>ПеремещаемыеИнструменты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПеремещаемыеИнструментыСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ПеремещаемыеИнструментыСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПеремещаемыеИнструментыУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>ПеремещаемыеИнструменты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПеремещаемыеИнструментыУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ПеремещаемыеИнструментыУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">ПеремещаемыеИнструментыПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПеремещаемыеИнструментыИнструмент" id="44">
+									<DataPath>ПеремещаемаяНоменклатура.Номенклатура</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПеремещаемыеИнструментыИнструментКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ПеремещаемыеИнструментыИнструментРасширеннаяПодсказка" id="46"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокИнструментов" id="75">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>СписокНоменклатуры</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="СписокИнструментовКонтекстноеМеню" id="76"/>
+			<AutoCommandBar name="СписокИнструментовКоманднаяПанель" id="77">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокИнструментовРасширеннаяПодсказка" id="78"/>
+			<SearchStringAddition name="СписокИнструментовСтрокаПоиска" id="79">
+				<AdditionSource>
+					<Item>СписокИнструментов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИнструментовСтрокаПоискаКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="СписокИнструментовСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокИнструментовСостояниеПросмотра" id="82">
+				<AdditionSource>
+					<Item>СписокИнструментов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИнструментовСостояниеПросмотраКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="СписокИнструментовСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокИнструментовУправлениеПоиском" id="85">
+				<AdditionSource>
+					<Item>СписокИнструментов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИнструментовУправлениеПоискомКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="СписокИнструментовУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="СписокИнструментовГруппа1" id="94">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СписокИнструментовГруппа1РасширеннаяПодсказка" id="95"/>
+					<ChildItems>
+						<CheckBoxField name="СписокИнструментовВыбрать" id="99">
+							<DataPath>СписокНоменклатуры.Выбрать</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокИнструментовВыбратьКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="СписокИнструментовВыбратьРасширеннаяПодсказка" id="101"/>
+							<Events>
+								<Event name="OnChange">СписокИнструментовВыбратьПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<PictureField name="СписокИнструментовКартинка" id="96">
+							<DataPath>СписокНоменклатуры.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокИнструментовКартинкаКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="СписокИнструментовКартинкаРасширеннаяПодсказка" id="98"/>
+						</PictureField>
+						<InputField name="СписокИнструментовИнструмент" id="88">
+							<DataPath>СписокНоменклатуры.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СписокИнструментовИнструментКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="СписокИнструментовИнструментРасширеннаяПодсказка" id="90"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СписокИнструментовШтрихкод" id="91">
+					<DataPath>СписокНоменклатуры.КоличествоОстаток</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИнструментовШтрихкодКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="СписокИнструментовШтрихкодРасширеннаяПодсказка" id="93"/>
+				</InputField>
+				<InputField name="СписокИнструментовСебестоимость" id="102">
+					<DataPath>СписокНоменклатуры.Себестоимость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИнструментовСебестоимостьКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="СписокИнструментовСебестоимостьРасширеннаяПодсказка" id="104"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПеремещаемаяНоменклатура" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещаемая номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокНоменклатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоОстаток" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество остаток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбрать" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Себестоимость" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость (ед)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отменить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отменить</Action>
+		</Command>
+		<Command name="ПеренестиВДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВДокумент</Action>
+		</Command>
+		<Command name="ОчиститьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВсе</Action>
+		</Command>
+	</Commands>
+</Form>
