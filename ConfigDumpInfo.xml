@@ -230,10 +230,10 @@
 		<Metadata name="CommonPicture.ОбщаяКартинка8.Picture" id="029f87c2-adf7-49c5-8bfa-97eed3632ecd.0" configVersion="0aa7b3980cdc1246b4bd068d28cb16a800000000"/>
 		<Metadata name="CommonPicture.Папка" id="ff2c506a-7ce4-4849-8b99-831309625d6b" configVersion="f30b0c59e00b164ba97e6c46e8e4c0c100000000"/>
 		<Metadata name="CommonPicture.Папка.Picture" id="ff2c506a-7ce4-4849-8b99-831309625d6b.0" configVersion="50e57f53c572034b8dd31dca85a5492200000000"/>
-		<Metadata name="Configuration.Конфигурация" id="1410541c-9db8-4fcc-b20c-d02448953424" configVersion="22b0f237ed777642be876afe017439d200000000"/>
+		<Metadata name="Configuration.Конфигурация" id="1410541c-9db8-4fcc-b20c-d02448953424" configVersion="42a99019d666a741b1060ac34b0e82ab00000000"/>
 		<Metadata name="Configuration.Конфигурация.ClientApplicationInterface" id="9944cc14-e4cc-4ccc-948d-4df343944a00.b" configVersion="59c84cc941ae2540a3ac5e354234a74100000000"/>
 		<Metadata name="Configuration.Конфигурация.CommandInterface" id="9944cc14-e4cc-4ccc-948d-4df343944a00.a" configVersion="2b5f28ad019ceb4c852e61e73aefa96a00000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="9944cc14-e4cc-4ccc-948d-4df343944a00.8" configVersion="f0d64e6799d41a4ba8bf3d87e8ef8c4b00000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="9944cc14-e4cc-4ccc-948d-4df343944a00.8" configVersion="680f2fcef678044a800ba5511a1a875a00000000"/>
 		<Metadata name="Configuration.Конфигурация.SessionModule" id="9944cc14-e4cc-4ccc-948d-4df343944a00.7" configVersion="2f75400bf204bf45bbd2c09f52542fa800000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаНоменклатурыИзФайла" id="6b8bbba3-cd02-47e4-be8f-daa00eaca085" configVersion="c47958fadeadb245a839a0ae3fd4eb6e00000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаНоменклатурыИзФайла.Form.Форма1" id="319b6453-026c-4d45-8c15-094b1fb5fb8e" configVersion="02aac56d2fc5294bb3520564cc71cf6f00000000"/>
