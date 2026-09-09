@@ -36,7 +36,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ООО Электроника опт</v8:content>
+					<v8:content>Румянцев Г.В. 70200358</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -48,7 +48,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
-			<Vendor/>
+			<Vendor>Румянцев Г.В.</Vendor>
 			<Version/>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
